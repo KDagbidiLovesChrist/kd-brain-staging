@@ -1,0 +1,11 @@
+THE ENGINE'S OWN LOG, the newest rows (read only, from v0.sqlite3)
+
+when                 world            who                what                   payload
+2026-09-11 16:04:38  kd-faceless      voice              voice.reply            {"model":"gemini-3.8-flash","tokens_in":99,"tokens_out":41,"milliseconds":3827}
+2026-09-11 13:55:48  kd-faceless      preverify          station.finished       "{\"station\":\"diagnose\",\"ok\":true}"
+2026-09-11 13:55:48  kd-faceless      diagnose_worker    gateway.response       {"mode":"local","billedTo":"operator","model":"qwen3:8b","inputTokens":3677,"outputTokens":99,"durationMs":175165,"evalM
+2026-09-11 13:52:52  kd-faceless      diagnose_worker    gateway.call           {"systemPromptSha256":"99d9cd88340722878ad391716ece061ac4296c6568a30f48bddea51ac913cb17","userPrompt":"Hook Engine, nine
+2026-09-11 13:52:52  kd-faceless      diagnose_worker    brain.consulted        {"files":["_ops/START_HERE_WINDOW.md","plans/redo-the-stage-scalable-cascade.md","_ops/REVENUE_QUEUE.md"],"count":3}
+2026-09-11 13:52:51  kd-faceless      preverify          station.started        "{\"station\":\"diagnose\"}"
+2026-09-11 13:52:51  kd-faceless      preverify          mission.created        "{\"missionId\":\"b43a09ff-92e0-4213-802a-a9277f58b919\",\"source\":\"command_bar\",\"briefChars\":126}"
+2026-09-11 13:52:50  kd-faceless      preverify          station.finished       "{\"station\":\"diagnose\",\"ok\":true}"

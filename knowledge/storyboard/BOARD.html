@@ -1,0 +1,113 @@
+<!doctype html><html><head><meta charset="utf-8"><title>KD Storyboard · real snips</title><style>
+:root{--navy:#0A1628;--gold:#C9A84C;--off:#F8F6F1;--green:#2D6A4F}
+body{background:var(--navy);color:var(--off);font:16px/1.6 Segoe UI,system-ui,sans-serif;margin:0}
+.wrap{max-width:1100px;margin:0 auto;padding:26px 20px 70px}
+h1{color:var(--gold);font-size:1.6rem;border-bottom:2px solid var(--gold);padding-bottom:.4rem}
+h2{color:var(--gold);font-size:1.12rem;margin:0 0 .5rem}
+figure{margin:0 0 2.6rem;border-top:1px solid #24354d;padding-top:1.2rem}
+img{width:100%;border:1px solid #24354d;border-radius:6px;display:block}
+figcaption{color:#cfe0f0;font-size:.95rem;margin:.6rem 0 0}
+pre{background:#0d1b2e;border-left:3px solid var(--gold);padding:12px 14px;overflow-x:auto;font:12.5px/1.45 Consolas,monospace;color:#d8e6f5;margin:.8rem 0 0}
+.lead{background:#132339;border:1px solid var(--gold);border-radius:8px;padding:16px 18px;margin:1rem 0 2rem}
+.lead b{color:var(--gold)} .need{border-color:#b4543a}
+</style></head><body><div class="wrap">
+<h1>Your estate, in real pictures</h1>
+<div class="lead">
+<p><b>What this is.</b> Not drawings. These are screenshots of the actual running things on this laptop, taken at 03:45 on 12 September 2026, plus the real printed output of the tools that have no screen.</p>
+<p><b>How to read it.</b> Scroll. Each picture is one thing you built. The line under it says what it is and whether it is real.</p>
+</div>
+<div class="lead need">
+<p><b>Two things need your hands.</b> The deck (Talk, your two replies, the living record) and n8n both ask for a sign in before they show anything. I will not type your token or password. Sign in on either, tell me, and I will take those two snips in a minute.</p>
+</div>
+<figure><h2>Your front door: the Vault</h2><img src="shots/logoi_vault.png" alt="Your front door: the Vault"><figcaption>LOGOI at 127.0.0.1:5056. 64 Logic commands, 57 plugin skills, the command deck down the right side, and the last brain sync time. Real, working, yours alone.</figcaption></figure><figure><h2>What is going on</h2><img src="shots/logoi_dashboard.png" alt="What is going on"><figcaption>The brain&#x27;s own pulse, measured when the picture was taken: which services are up, 305 memories, 92 money ideas waiting for your yes. The phone link is red because you switched that tunnel off, which is correct. The dead address is masked on this page.</figcaption></figure><figure><h2>The avatar: tap to talk</h2><img src="shots/logoi_avatar.png" alt="The avatar: tap to talk"><figcaption>Where your voice goes in. The line at the bottom is the promise the code keeps: your voice, your notes and the answer all stay on this laptop.</figcaption></figure><figure><h2>EDEN LIVE, the estate as a garden</h2><img src="shots/mission_control.png" alt="EDEN LIVE, the estate as a garden"><figcaption>Mission Control at 5055. Five realms (Core, Work, Money, Faith, Theosis) around the Source. 97 health, 6 machines down, 6 queued, 17 stones, 41 lessons. Tap a realm to enter its control room.</figcaption></figure><figure><h2>The engine&#x27;s door, and it says no</h2><img src="shots/deck_talk.png" alt="The engine&#x27;s door, and it says no"><figcaption>The deck at 3200 asks for your operator token before it shows Talk. This is the door, not the room. Capturing the room needs you to sign in; I will not type your token.</figcaption></figure><figure><h2>The doors board</h2><figcaption>Which AI doors exist, which are open, and what each spends. Run: python tools/harness_status.py</figcaption><pre>THE DOORS, seen from DESKTOP-GRULS39
+
+  1. ccr code      open  (service up)
+     the everyday door: 5 of its 6 routes are PAID (OpenRouter), only background is free on the laptop, and it is the only way to put the router in front of Claude Code
+  2. Claude Code   open   [your account]
+     the chair. Judgement, contracts, terminal work. A plan already paid for
+  3. Codex         open   [a plan (fixed bar)]
+     web interfaces and hard architecture
+  4. Antigravity   open   [your account]
+     visual work, image mockups, a free second opinion
+  5. Copilot CLI   open 
+     several vendors under one login, when other bars are spent
+  6. Hermes        absent
+     a free grinder pointed at the local models
+  7. Ollama        open  (service up)
+     the floor. Free, private, and it cannot run out
+
+  also here:
+    Gemini CLI    open
+
+SIGNED IN
+  Claude Code   your account
+  Codex         a plan (fixed bar)
+  Antigravity   your account
+  GitHub        signed in
+
+CCR, THE EVERYDAY DOOR
+  background    ollama,llama3.2:1b                 FREE, your own machine
+  default       openrouter,google/gemini-3.8-flash paid
+  image         openrouter,google/gemini-3.8-flash paid
+  longContext   openrouter,google/gemini-3.8-flash paid
+  think         openrouter,google/gemini-3.8-flash paid
+  webSearch     openrouter,google/gemini-3.8-flash paid
+  1 free, 5 paid.
+  ccr records no token counts of its own, so per-call ccr spend cannot be read.
+  Every paid route goes through OpenRouter, so `python tools/spend_meter.py`
+  already includes it, mixed in with any other OpenRouter use.
+
+WHAT CAN BE MEASURED
+  readable by a script: OpenRouter credit, Copilot usage (with a plan), local health
+  NOT readable: the Claude plan bars, Antigravity&#x27;s bars, the Gemini free tier, the
+    OpenAI balance. For those this tool can say which door fits, never how much is left.
+  So: glance at the bar inside the app before a long session on a paid door.
+
+(this tool never opens a door and never spends anything. Your hand does that.)</pre></figure><figure><h2>The money meter</h2><figcaption>Every paid call this month, by provider and by lane, against your 20 USD envelope. Run: python tools/spend_meter.py</figcaption><pre>SPEND METER  2026-09
+
+  THE ENVELOPE, from the brain&#x27;s own ruling
+  [..................................]  USD 0.00 of 20.00, 20.00 left
+
+  BY PROVIDER, from the ledger
+    gemini          2 calls        133 in        56 out  USD  0.0003
+    anthropic       1 calls         16 in         8 out  USD  0.0002
+    openrouter      1 calls        106 in       117 out  USD  0.0001
+    nvidia          1 calls         48 in       184 out  USD  0.0000
+
+  BY LANE, which is the half a vendor bill can never tell you
+    live-check   USD  0.0003
+    voice        USD  0.0002
+
+  3 call(s) were written before this meter knew their price and have been
+  repriced from their own recorded tokens, so the ledger corrects itself.
+
+  (this tool reads and records. It never calls a model and never spends.)</pre></figure><figure><h2>The health check</h2><figcaption>Up, current and working are three different questions. Run: python tools/logos_health.py</figcaption><pre>SERVICE          PORT   UP      CURRENT   WORKING   WHY
+------------------------------------------------------------------------------------------------
+LOGOI            5056   yes     yes       yes       work lane sees 98 files
+Ollama           11434  yes     n/a       NO        0 model(s) resident
+Logos engine     3000   yes     yes       yes       last real model answer 763 min ago; newest e
+Logos partner    3100   DOWN    n/a       unknown   no telemetry this module can read
+The deck         3200   yes     yes       unknown   no telemetry this module can read
+ccr              3456   yes     yes       unknown   no telemetry this module can read
+Mission Control  5055   yes     yes       unknown   no telemetry this module can read
+n8n              5678   yes     n/a       unknown   no telemetry this module can read
+
+NEEDS ATTENTION (2):
+  Ollama           listening but not working. 0 model(s) resident
+  Logos partner    DOWN. the second instance, its own database</pre></figure><figure><h2>The engine&#x27;s own log</h2><figcaption>The newest rows, read only. Every call the engine makes lands here, including the voice reply that cost 0.000228 USD.</figcaption><pre>THE ENGINE&#x27;S OWN LOG, the newest rows (read only, from v0.sqlite3)
+
+when                 world            who                what                   payload
+2026-09-11 16:04:38  kd-faceless      voice              voice.reply            {&quot;model&quot;:&quot;gemini-3.8-flash&quot;,&quot;tokens_in&quot;:99,&quot;tokens_out&quot;:41,&quot;milliseconds&quot;:3827}
+2026-09-11 13:55:48  kd-faceless      preverify          station.finished       &quot;{\&quot;station\&quot;:\&quot;diagnose\&quot;,\&quot;ok\&quot;:true}&quot;
+2026-09-11 13:55:48  kd-faceless      diagnose_worker    gateway.response       {&quot;mode&quot;:&quot;local&quot;,&quot;billedTo&quot;:&quot;operator&quot;,&quot;model&quot;:&quot;qwen3:8b&quot;,&quot;inputTokens&quot;:3677,&quot;outputTokens&quot;:99,&quot;durationMs&quot;:175165,&quot;evalM
+2026-09-11 13:52:52  kd-faceless      diagnose_worker    gateway.call           {&quot;systemPromptSha256&quot;:&quot;99d9cd88340722878ad391716ece061ac4296c6568a30f48bddea51ac913cb17&quot;,&quot;userPrompt&quot;:&quot;Hook Engine, nine
+2026-09-11 13:52:52  kd-faceless      diagnose_worker    brain.consulted        {&quot;files&quot;:[&quot;_ops/START_HERE_WINDOW.md&quot;,&quot;plans/redo-the-stage-scalable-cascade.md&quot;,&quot;_ops/REVENUE_QUEUE.md&quot;],&quot;count&quot;:3}
+2026-09-11 13:52:51  kd-faceless      preverify          station.started        &quot;{\&quot;station\&quot;:\&quot;diagnose\&quot;}&quot;
+2026-09-11 13:52:51  kd-faceless      preverify          mission.created        &quot;{\&quot;missionId\&quot;:\&quot;b43a09ff-92e0-4213-802a-a9277f58b919\&quot;,\&quot;source\&quot;:\&quot;command_bar\&quot;,\&quot;briefChars\&quot;:126}&quot;
+2026-09-11 13:52:50  kd-faceless      preverify          station.finished       &quot;{\&quot;station\&quot;:\&quot;diagnose\&quot;,\&quot;ok\&quot;:true}&quot;</pre></figure>
+<div class="lead">
+<p><b>Real today:</b> the Vault, the dashboard, the avatar, EDEN LIVE, the doors board, the money meter, the health check and the engine's log are all running and pictured above.</p>
+<p><b>Half built:</b> the deck and n8n are up but sit behind a sign in, so they are not pictured. The second engine instance (Logos partner) is down.</p>
+<p><b>Zero:</b> Hermes, and the 3D console of Stage 7.</p>
+</div>
+</div></body></html>

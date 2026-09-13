@@ -1,0 +1,17 @@
+# Loom Transcript · BP_AZ_RAG_OpenAI_Tokenizer
+
+**Source video ID:** faec8bed53844846aac10752b703ec23
+**Loom URL:** https://www.loom.com/share/faec8bed53844846aac10752b703ec23
+**Detected language:** en (probability 1.00)
+**Duration:** 170.8s
+
+---
+
+[00:00] Okay, so recording this right after recording that tokenizer deep dive video for the vector database deep dive series, but this is an opening eye tokenizer, right?
+[00:11] So what we're doing here is we're able to look at different models, we're able to put in our prompts and we're able to see the tokens and the characters and basically see an example of what we're looking at.
+[00:23] So in this case, we've got 53 tokens, we can see how they're being split up, we can see the actual token IDs right here. So right here, it says a helpful rule of thumb is that one token generally corresponds to about four characters of text for common English text, this translates to roughly three quarters of a word, so 100 tokens is about 75 words, and then you're able to obviously look at your pricing based on what model you're using and how many tokens are coming through.
+[00:52] So as you can see the token slightly vary based on the model, but that was just a quick example, right? So there'll be a link for, you know, this exact place that I'm at right here, but let's just look at, you know, how this could work. So basically here, we have this prompt, you're an advanced AI assistant, divine to provide detailed new wants and specific answers to complex questions, your goal is to help users solve problems in a clear, accurate and concise manner while maintaining a conversational friendly tone, the response should be thorough.
+[01:22] So if you're incorporating relevant background knowledge, practical examples, any explicit context stated in the query, for instance, if asked about machine learning algorithms, include explanations, use cases in their relative advantages advantages, ensure clarity and accessibility for users of varying levels of expertise. Okay, so that's 612 characters, 103 tokens, and now what we're going to do here is replace it with this guy, and I basically asked Chatcha BT to make me three prompts.
+[01:50] High talking usage usage balance token usage and then low and essentially that they're all the same type of prompts really so you're an AI assistant tasked with providing clear, accurate and concise answers, ensure responses include practical examples and relevant details, tailor your explanation to the user's level of expertise using plain language and avoiding unnecessary jargon and as you can see, super decreased and it still maintains sort of like the context that we really need here, and then finally, you know, an example of, you know,
+[02:18] maybe very cheap, obviously you can see how it's split up, but this is not really going to be the way that you want to prompt your agent answer clearly and concise, so use examples of needed you can test out it might work, it might be fine, but anyways, just wanted to show a quick example of how this works, this is the more extensive one, if we go to three, five, and four, we're getting, okay, it's actually, you know, we're getting more tokens here and legacy, we're getting one slightly more. So, yeah, I just wanted to make the super, super quick video, and like I said, I'll throw a link here could be interesting when you're refining your problem.
+[02:48] That's for your agent, so thanks.

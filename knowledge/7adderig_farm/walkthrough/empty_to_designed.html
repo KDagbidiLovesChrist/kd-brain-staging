@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>7 Adderig Farm — Empty → Designed Walkthrough</title>
+<style>
+  :root{
+    --navy:#0A1628; --gold:#C9A84C; --offwhite:#F8F6F1; --green:#2D6A4F;
+    --card:#101e33; --line:rgba(201,168,76,.25);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    background:radial-gradient(1200px 600px at 50% -10%, #16263f 0%, var(--navy) 60%);
+    color:var(--offwhite); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    min-height:100vh; padding:28px 16px 80px;
+  }
+  header{max-width:1100px;margin:0 auto 8px;text-align:center}
+  h1{font-size:clamp(22px,5vw,34px);font-weight:700;letter-spacing:.3px}
+  h1 .gold{color:var(--gold)}
+  .sub{opacity:.75;margin-top:6px;font-size:14px}
+
+  /* progress */
+  .progress-wrap{max-width:1100px;margin:18px auto 26px;text-align:center}
+  .bar{height:10px;background:rgba(255,255,255,.08);border-radius:99px;overflow:hidden;border:1px solid var(--line)}
+  .fill{height:100%;width:0;background:linear-gradient(90deg,var(--green),var(--gold));transition:width .6s ease}
+  .progress-label{margin-top:8px;font-size:13px;opacity:.85}
+  .progress-label b{color:var(--gold)}
+
+  /* floor filter */
+  .filters{max-width:1100px;margin:0 auto 22px;display:flex;gap:8px;justify-content:center;flex-wrap:wrap}
+  .filters button{
+    background:transparent;color:var(--offwhite);border:1px solid var(--line);
+    padding:8px 16px;border-radius:99px;font-size:13px;cursor:pointer;transition:.2s
+  }
+  .filters button.active{background:var(--gold);color:var(--navy);border-color:var(--gold);font-weight:600}
+
+  /* grid */
+  .grid{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:20px}
+  .card{
+    background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;
+    box-shadow:0 10px 30px rgba(0,0,0,.35)
+  }
+  .room-head{display:flex;align-items:center;justify-content:space-between;padding:14px 16px}
+  .room-name{font-weight:600;font-size:16px}
+  .room-floor{font-size:11px;opacity:.6;text-transform:uppercase;letter-spacing:1px}
+  .badge{font-size:11px;padding:4px 10px;border-radius:99px;font-weight:600}
+  .badge.done{background:rgba(45,106,79,.25);color:#7fd6a8;border:1px solid rgba(127,214,168,.4)}
+  .badge.pending{background:rgba(201,168,76,.12);color:var(--gold);border:1px solid var(--line)}
+
+  /* before/after slider */
+  .ba{position:relative;width:100%;aspect-ratio:4/3;overflow:hidden;background:#0c1322;user-select:none;touch-action:none}
+  .ba img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;pointer-events:none}
+  .ba .after-wrap{position:absolute;inset:0;overflow:hidden;width:50%}
+  .ba .after-wrap img{width:100vw;max-width:none}           /* keep alignment when clipped */
+  .ba .handle{position:absolute;top:0;bottom:0;left:50%;width:3px;background:var(--gold);transform:translateX(-50%);cursor:ew-resize}
+  .ba .handle::after{
+    content:"⇆";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+    width:38px;height:38px;border-radius:50%;background:var(--gold);color:var(--navy);
+    display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:700;
+    box-shadow:0 4px 12px rgba(0,0,0,.4)
+  }
+  .ba .tag{position:absolute;bottom:10px;padding:4px 10px;border-radius:6px;font-size:11px;font-weight:600;letter-spacing:.5px;background:rgba(10,22,40,.8);backdrop-filter:blur(4px)}
+  .ba .tag.empty{left:10px;color:var(--offwhite)}
+  .ba .tag.designed{right:10px;color:var(--gold)}
+
+  /* not-yet-designed overlay */
+  .soon{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;
+    background:rgba(10,22,40,.55);backdrop-filter:blur(2px);text-align:center;padding:20px}
+  .soon .label{font-size:14px;color:var(--gold);font-weight:600}
+  .soon .hint{font-size:12px;opacity:.7;margin-top:4px}
+
+  footer{max-width:1100px;margin:40px auto 0;text-align:center;font-size:12px;opacity:.55;line-height:1.6}
+  .it{color:var(--gold);font-style:italic}
+</style>
+</head>
+<body>
+  <header>
+    <h1>7 Adderig Farm — <span class="gold">Empty → Designed</span></h1>
+    <p class="sub">Drag each slider: see the room as it is now → watch it become the finished design. Fills out room by room as we lock each one.</p>
+  </header>
+
+  <div class="progress-wrap">
+    <div class="bar"><div class="fill" id="fill"></div></div>
+    <div class="progress-label"><b id="doneCount">0</b> of <b id="totalCount">12</b> rooms designed</div>
+  </div>
+
+  <div class="filters" id="filters">
+    <button data-floor="all" class="active">Whole house</button>
+    <button data-floor="ground">Ground floor</button>
+    <button data-floor="upper">Upper floor</button>
+  </div>
+
+  <div class="grid" id="grid"></div>
+
+  <footer>
+    Built from King David's real empty-house walkthrough — every "designed" view is rendered <span class="it">on top of the actual room</span>, never invented.<br/>
+    “It Will Be Done.”
+  </footer>
+
+<script>
+/* ============================================================================
+   ROOM DATA  —  the ONLY thing the laptop edits as each room gets designed.
+   For each room:
+     empty:    filename of the real EMPTY frame  (already have these)
+     designed: filename of the rendered DESIGNED view (anchored to that empty
+               frame via gemini_render.py --ref). Leave "" until it's made.
+   When 'designed' is filled in, the card auto-flips to a live before/after.
+   Drop image files next to this HTML (or in ./img/) and use matching paths.
+============================================================================ */
+const ROOMS = [
+  { name:"Hall + Staircase", floor:"ground", empty:"img/hall_empty.jpg",       designed:"" },
+  { name:"Living Room",      floor:"ground", empty:"img/living_empty.jpg",     designed:"" },
+  { name:"Kitchen / Dining", floor:"ground", empty:"img/kitchen_empty.jpg",    designed:"" },
+  { name:"WC",               floor:"ground", empty:"img/wc_empty.jpg",         designed:"" },
+  { name:"Utility",          floor:"ground", empty:"img/utility_empty.jpg",    designed:"" },
+  { name:"Terrace",          floor:"ground", empty:"img/terrace_empty.jpg",    designed:"" },
+  { name:"Bicycle Storage",  floor:"ground", empty:"img/bike_empty.jpg",       designed:"" },
+  { name:"Bedroom 1 (Master)",floor:"upper", empty:"img/bed1_empty.jpg",       designed:"" },
+  { name:"Bedroom 2",        floor:"upper",  empty:"img/bed2_empty.jpg",       designed:"" },
+  { name:"Bedroom 3",        floor:"upper",  empty:"img/bed3_empty.jpg",       designed:"" },
+  { name:"Main Bathroom",    floor:"upper",  empty:"img/bath_empty.jpg",       designed:"" },
+  { name:"Store",            floor:"upper",  empty:"img/store_empty.jpg",      designed:"" },
+];
+
+const grid = document.getElementById('grid');
+
+function makeCard(room){
+  const done = !!room.designed;
+  const card = document.createElement('div');
+  card.className = 'card';
+  card.dataset.floor = room.floor;
+
+  card.innerHTML = `
+    <div class="room-head">
+      <div>
+        <div class="room-name">${room.name}</div>
+        <div class="room-floor">${room.floor === 'ground' ? 'Ground floor' : 'Upper floor'}</div>
+      </div>
+      <span class="badge ${done?'done':'pending'}">${done?'Designed':'Empty'}</span>
+    </div>
+    <div class="ba">
+      <img class="before" src="${room.empty}" alt="${room.name} empty"
+           onerror="this.style.opacity=.15"/>
+      ${done ? `
+        <div class="after-wrap">
+          <img src="${room.designed}" alt="${room.name} designed"/>
+        </div>
+        <div class="handle"></div>
+        <div class="tag empty">NOW</div>
+        <div class="tag designed">DESIGNED</div>
+      ` : `
+        <div class="soon">
+          <div class="label">Designed view coming</div>
+          <div class="hint">added the moment we lock this room</div>
+        </div>
+      `}
+    </div>`;
+
+  if(done) enableSlider(card.querySelector('.ba'));
+  return card;
+}
+
+function enableSlider(ba){
+  const afterWrap = ba.querySelector('.after-wrap');
+  const handle = ba.querySelector('.handle');
+  const afterImg = afterWrap.querySelector('img');
+  function setPct(pct){
+    pct = Math.max(0, Math.min(100, pct));
+    afterWrap.style.width = pct + '%';
+    handle.style.left = pct + '%';
+    afterImg.style.width = ba.clientWidth + 'px';   // keep designed img aligned to card
+  }
+  function fromEvent(e){
+    const rect = ba.getBoundingClientRect();
+    const x = (e.touches ? e.touches[0].clientX : e.clientX) - rect.left;
+    setPct((x / rect.width) * 100);
+  }
+  let dragging = false;
+  const start = e => { dragging = true; fromEvent(e); };
+  const move  = e => { if(dragging){ fromEvent(e); e.preventDefault?.(); } };
+  const end   = () => dragging = false;
+  ba.addEventListener('mousedown', start);
+  window.addEventListener('mousemove', move);
+  window.addEventListener('mouseup', end);
+  ba.addEventListener('touchstart', start, {passive:true});
+  ba.addEventListener('touchmove', move, {passive:false});
+  ba.addEventListener('touchend', end);
+  window.addEventListener('resize', () => afterImg.style.width = ba.clientWidth + 'px');
+  setPct(50);
+}
+
+function render(filter='all'){
+  grid.innerHTML = '';
+  ROOMS.filter(r => filter==='all' || r.floor===filter).forEach(r => grid.appendChild(makeCard(r)));
+  const done = ROOMS.filter(r => r.designed).length;
+  document.getElementById('doneCount').textContent = done;
+  document.getElementById('totalCount').textContent = ROOMS.length;
+  document.getElementById('fill').style.width = (done/ROOMS.length*100) + '%';
+}
+
+document.getElementById('filters').addEventListener('click', e => {
+  if(e.target.tagName !== 'BUTTON') return;
+  document.querySelectorAll('.filters button').forEach(b => b.classList.remove('active'));
+  e.target.classList.add('active');
+  render(e.target.dataset.floor);
+});
+
+render();
+</script>
+</body>
+</html>

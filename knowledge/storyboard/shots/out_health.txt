@@ -1,0 +1,14 @@
+SERVICE          PORT   UP      CURRENT   WORKING   WHY
+------------------------------------------------------------------------------------------------
+LOGOI            5056   yes     yes       yes       work lane sees 98 files
+Ollama           11434  yes     n/a       NO        0 model(s) resident
+Logos engine     3000   yes     yes       yes       last real model answer 763 min ago; newest e
+Logos partner    3100   DOWN    n/a       unknown   no telemetry this module can read
+The deck         3200   yes     yes       unknown   no telemetry this module can read
+ccr              3456   yes     yes       unknown   no telemetry this module can read
+Mission Control  5055   yes     yes       unknown   no telemetry this module can read
+n8n              5678   yes     n/a       unknown   no telemetry this module can read
+
+NEEDS ATTENTION (2):
+  Ollama           listening but not working. 0 model(s) resident
+  Logos partner    DOWN. the second instance, its own database

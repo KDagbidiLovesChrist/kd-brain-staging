@@ -1,0 +1,324 @@
+# Nate Herk Video DB - extracted links (Watch + Resources)
+
+
+## Q1 2026
+
+- **Once You Know This, Building RAG Agents Becomes Easy in n8n** (Jan 5, 2026)
+  - watch: https://youtu.be/kOKavHnlPik
+  - resources: https://drive.google.com/drive/folders/1veFG7SwuGHgRT8Z_eIm7lbo2uhSuv2XQ
+- **I Built a New AI System in 3 Hours (and got paid $1650)** (Jan 7, 2026)
+  - watch: https://youtu.be/Q4iEslmyMyM
+  - resources: https://drive.google.com/drive/folders/1v6Xqty7Ss5GUIaIYiJ-Nq0y8Rr7Vccrg
+- **I Built a Voice Agent That Calls Every New Lead (n8n + Vapi)** (Jan 12, 2026)
+  - watch: https://youtu.be/BO-jFbN4p8Y
+  - resources: https://drive.google.com/drive/folders/153-dVBo9XpK4_MxiVf-xV7JNEt11gxnt
+- **Easiest Way to Migrate n8n Workflows Between Accounts (cloud to self-hosted)** (Jan 14, 2026)
+  - watch: https://youtu.be/t1PTmpas0bg
+  - resources: https://drive.google.com/drive/folders/1iRWNtD8XogUl3XTuFct3ciRMT6w9EWgJ
+- **Claude Code is Better at n8n than I am (Beginner's Guide)** (Jan 14, 2026)
+  - watch: https://youtu.be/B6k_vAjndMo
+  - resources: https://drive.google.com/drive/folders/1lQ_C3U2Yub8rvaQTnZyiQ-0seMQ5rre4
+- **Build ANYTHING with Claude Code & n8n (Beginner's Guide)** (Jan 16, 2026)
+  - watch: https://youtu.be/OCO3aq3G0mk
+  - resources: none
+- **I Built an AI System That Automates My Proposals (n8n + Gamma)** (Jan 19, 2026)
+  - watch: https://youtu.be/KGXFkUlBHxw
+  - resources: https://drive.google.com/drive/folders/1JspZDqbygDUrTaO9mJYqHUbbQPodiNam
+- **How I INSTANTLY Generate Proposal Decks with n8n AI Agents** (Jan 19, 2026)
+  - watch: https://youtu.be/-Q_P7HFydZk
+  - resources: https://drive.google.com/drive/folders/16PDGopv9srR-EJPZ9BfM2Q2wYUdzb2BJ
+- **Master 95% of Claude Code in 36 Mins (as a beginner)** (Jan 21, 2026)
+  - watch: https://youtu.be/saggDHHnmtQ
+  - resources: https://drive.google.com/drive/folders/1zUMhDia2fY3ohHH6aanT_GW1FZnCzzur
+- **I Will Never Fix Another n8n Workflow (Claude Code)** (Jan 22, 2026)
+  - watch: https://youtu.be/uUEa6K-FLB8
+  - resources: https://drive.google.com/drive/folders/1jPxiiS0AJd3BQTa2TgaHpipMw_IKw6ba
+- **Agentic Workflows Just Changed AI Automation Forever! (Claude Code)** (Jan 25, 2026)
+  - watch: https://youtu.be/AO5aW01DKHo
+  - resources: https://drive.google.com/drive/folders/1vJYIcW0eVO4tJY_w5EqGYpnR3G2xa30m
+- **Set Up Clawdbot on a VPS in Minutes (no mac mini)** (Jan 27, 2026)
+  - watch: https://youtu.be/BhjK2Gr0Ryc
+  - resources: none
+- **100 Hours Testing Clawdbot vs Claude Code (honest results)** (Jan 28, 2026)
+  - watch: https://youtu.be/CBNbcbMs_Lc
+  - resources: https://drive.google.com/drive/folders/1rN6XlFS5O4OcLPDxmrrAwu3-71i3rJtZ
+- **I Turned Clawdbot Into the Ultimate Personal Assistant** (Jan 30, 2026)
+  - watch: https://youtu.be/rlJovzVhlIo
+  - resources: none
+- **Is n8n Dead?** (Feb 1, 2026)
+  - watch: https://youtu.be/wb4uDdsFh6o
+  - resources: none
+- **How to Sign Your First AI Automation Client in 7 days (With Proof)** (Feb 4, 2026)
+  - watch: https://youtu.be/c2C_SbZk6iI
+  - resources: none
+- **How Iâ€™d Teach a 10 Year Old to Build Agentic Workflows (Claude Code)** (Feb 7, 2026)
+  - watch: https://youtu.be/3GAxd90fEE4
+  - resources: https://drive.google.com/drive/folders/10RU0oHWIw2Cy5-rXOKw4iUD3LuMCDXLp
+- **Turn Any Website Into LLM Ready Data INSTANTLY** (Feb 11, 2026)
+  - watch: https://youtu.be/4efAzBiTeVo
+  - resources: https://drive.google.com/drive/folders/17IXJBlb4HBNy5w1cPrjE3k56itSPMVy5
+- **How a College Student Made $500k with Cold Email (Exact Framework)** (Feb 14, 2026)
+  - watch: https://youtu.be/XB2xmX3USUI
+  - resources: https://drive.google.com/drive/folders/1Eyp_cM4ZgGkC1y21Q3PqMtlUueU_QAYA
+- **How to Sign AI Workflow Clients (With 0 Followers)** (Feb 16, 2026)
+  - watch: https://youtu.be/_rZAR-s4KIo
+  - resources: https://drive.google.com/drive/folders/1HxxJCGtVGgLcAq96sHdPnEAm4RJ22plf
+- **Building Beautiful Websites with Claude Code Is Too Easy** (Feb 19, 2026)
+  - watch: https://youtu.be/86HM0RUWhCk
+  - resources: https://drive.google.com/drive/folders/1V5H7yxrUnA6C0hmSxVMtJL5-MF3q2I4l
+- **The EASIEST Way to Host Your Claude Code Agents** (Feb 20, 2026)
+  - watch: https://youtu.be/UGIZnh6HNLc
+  - resources: https://drive.google.com/drive/folders/1fFYXra4_Cs69fnwcmTZ3CBuG9OaYtCP-
+- **From Zero to Your First Agentic AI Workflow in 26 Minutes (Claude Code)** (Feb 23, 2026)
+  - watch: https://youtu.be/tDGiWn0flK8
+  - resources: https://drive.google.com/drive/folders/1vBWsH1jwku4DdTsb8AqLgXAkeLFdyYe1
+- **I Can Actually Watch My AI Agents Work Now** (Feb 25, 2026)
+  - watch: https://youtu.be/62Rfe1w9NBc
+  - resources: none
+- **Claude Code Just Added What Everyone Wanted (Remote Control)** (Feb 25, 2026)
+  - watch: https://youtu.be/EqhKw0Oro_k
+  - resources: none
+- **Master 95% of Claude Code Skills in 28 Minutes** (Feb 27, 2026)
+  - watch: https://youtu.be/zKBPwDpBfhs
+  - resources: https://drive.google.com/drive/folders/18PsHZnb2vvT_SaVt_AJgreCEliZMhacY
+- **The NEW Nano Banana 2 + Antigravity Destroys Every AI Image Tool** (Feb 27, 2026)
+  - watch: https://youtu.be/iTKkoGd3YcM
+  - resources: https://drive.google.com/drive/folders/1y5Fp9ZvadSgn5lEBN1Z6IklnAOZoVKbm
+- **The NEW Nano Banana 2 + Claude Code = $10k Websites** (Mar 3, 2026)
+  - watch: https://youtu.be/q0TgUtj6vIs
+  - resources: https://drive.google.com/drive/folders/1EJAYDqcda1sArWIBoowwoqeyD1aJ1uC8
+- **Turn Claude Code Into Your Executive Assistant in 27 Mins** (Mar 5, 2026)
+  - watch: https://youtu.be/mi4hcipESKQ
+  - resources: https://drive.google.com/drive/folders/1jc3wC6cYqqTyltsf2OlXxSQoTx6oZflm
+- **Claude Code Skills Just Got Even Better** (Mar 5, 2026)
+  - watch: https://youtu.be/RAZVk5NPNtE
+  - resources: none
+- **Cursor Automations Clearly Explained (worth learning?)** (Mar 6, 2026)
+  - watch: https://youtu.be/NDnv16PY2XQ
+  - resources: none
+- **Claude Code 2.0 Is Finally Here** (Mar 7, 2026)
+  - watch: https://youtu.be/BlNJFa3Btm8
+  - resources: none
+- **This New Claude Code Feature is a Game Changer** (Mar 7, 2026)
+  - watch: https://youtu.be/OUyfxhFtGCo
+  - resources: none
+- **How to Build $10,000 Agentic Workflows (Claude Code Tutorial)** (Mar 8, 2026)
+  - watch: https://youtu.be/vFepZE_wrfg
+  - resources: none
+- **Googleâ€™s New Tool Just 10xâ€™d Claude Code** (Mar 10, 2026)
+  - watch: https://youtu.be/Wu67lLD8bB0
+  - resources: none
+- **I Taught Claude Code to Play Tetris... It Broke the World Record** (Mar 11, 2026)
+  - watch: https://youtu.be/l1jnOXc52NY
+  - resources: none
+- **Google's New Model + Claude Code Just Changed RAG Forever** (Mar 11, 2026)
+  - watch: https://youtu.be/hem5D1uvy-w
+  - resources: none
+- **Build & Sell with Claude Code (10+ Hour Course)** (Mar 12, 2026)
+  - watch: https://youtu.be/mpALXah_PBg
+  - resources: https://drive.google.com/drive/folders/1Mnc-l2aeAMsQNPKx43Nh34nSzD20bkB6
+- **Generate Content for 9 Socials on Autopilot with Claude Code** (Mar 17, 2026)
+  - watch: https://youtu.be/4Zaoo0YbYaw
+  - resources: https://drive.google.com/drive/folders/1W6UVgpd4BLZA79mYvtosxlGh7xNixi9L
+- **Stop Learning n8n in 2026...Learn THIS Instead** (Mar 21, 2026)
+  - watch: https://youtu.be/ZeJXI2MAhj0
+  - resources: none
+- **How to Build Claude Agent Teams Better Than 99% of People** (Mar 23, 2026)
+  - watch: https://youtu.be/vDVSGVpB2vc
+  - resources: none
+- **This $100M AI App Just Changed Software Forever** (Mar 23, 2026)
+  - watch: https://youtu.be/T6_Ges4j1qY
+  - resources: https://drive.google.com/drive/folders/1EAohU9M2NdRCpvziBIHI0WPg7rvaqBtg
+- **Claude Code Just Got Another Huge Upgrade** (Mar 24, 2026)
+  - watch: https://youtu.be/X6EGzi9qm3E
+  - resources: none
+- **Claude Code Just Dropped Memory 2.0** (Mar 24, 2026)
+  - watch: https://youtu.be/LrgfmZkl3nc
+  - resources: none
+- **STOP Using Bypass Permissions, Use This New Feature Instead** (Mar 24, 2026)
+  - watch: https://youtu.be/pkSxISewcw8
+  - resources: https://drive.google.com/drive/folders/1L9IYpeIXS60MkpbkFJ4_FRHGD0yv6Fym
+- **Claude Code + iMessage is Finally Here.** (Mar 26, 2026)
+  - watch: https://youtu.be/hHlpVeooPrI
+  - resources: none
+- **Gemini 3.1 Flash Live Just Changed Voice Agents Forever** (Mar 28, 2026)
+  - watch: https://youtu.be/Qt3zMBH-FNg
+  - resources: https://drive.google.com/drive/folders/1Mbq4I-1zqlSUxVEMzOkHnxNVY3A_vQ9r
+- **Claude Code + Paperclip Just Destroyed OpenClaw** (Mar 28, 2026)
+  - watch: https://youtu.be/HJ-dwefABss
+  - resources: https://drive.google.com/drive/folders/16Q-59pQFeYe1Um84JDScO8irGBkVgGsL
+- **Iâ€™ve Built 500 AI Workflows, This is What Businesses Want in 2026** (Mar 30, 2026)
+  - watch: https://youtu.be/Y3PcRp5RFzk
+  - resources: https://drive.google.com/drive/folders/13pBzMyvJksi5RJLBpRr_Vk-zA1w8vF3C
+- **Codex Just 10xâ€™d Claude Code Projects** (Mar 31, 2026)
+  - watch: https://youtu.be/B2Kh_ZoLVTM
+  - resources: none
+
+## Q2 2026
+
+- **Claude Code Source Code Just Leakedâ€¦ 8 Things You Must Do** (Apr 1, 2026)
+  - watch: https://youtu.be/tXtCK66fPj8
+  - resources: https://drive.google.com/drive/folders/14V5Xym3SWQ8RUUScGF5X-YY4sGmIYjFb
+- **Claude Code Just Gave Everyone Virtual Pets (April Fools?)** (Apr 1, 2026)
+  - watch: https://youtu.be/JoPmpwpRrBI
+  - resources: none
+- **18 Claude Code Token Hacks in 18 Minutes** (Apr 2, 2026)
+  - watch: https://youtu.be/49V-5Ock8LU
+  - resources: https://drive.google.com/drive/folders/1otBAvqeuLexmyNxEIUSnhkcVp2yB5bNb
+- **Ollama + Claude Code = 99% CHEAPER** (Apr 4, 2026)
+  - watch: https://youtu.be/O2k_qwZA8HU
+  - resources: https://drive.google.com/drive/folders/1RSZmdxLSiqH8jlCf-dIAJ3Zoo_bVW_Hp
+- **Andrej Karpathy Just 10xâ€™d Everyoneâ€™s Claude Code** (Apr 5, 2026)
+  - watch: https://youtu.be/sboNwYmH3AY
+  - resources: none
+- **Planning In Claude Code Just Got a Huge Upgrade** (Apr 6, 2026)
+  - watch: https://youtu.be/T4fXb3sbJIo
+  - resources: none
+- **Claudeâ€™s New AI Just Changed the Internet Forever** (Apr 7, 2026)
+  - watch: https://youtu.be/DG1wRgEpdO4
+  - resources: none
+- **I Tested Claude's New Managed Agents... What You Need To Know** (Apr 8, 2026)
+  - watch: https://youtu.be/27Y44JYXZJ8
+  - resources: https://drive.google.com/drive/folders/1BKy3R1WaEaiXsLH7KTHPDmDhHXOBJbGo
+- **I Gave OpenClaw $10,000 to Trade Stocks** (Apr 9, 2026)
+  - watch: https://youtu.be/eu8UJtuIi-E
+  - resources: none
+- **Claude Just Told Us to Stop Using Their Best Model** (Apr 9, 2026)
+  - watch: https://youtu.be/1EPsUXSManU
+  - resources: https://github.com/nateherkai/advisor-tool-demo
+- **Seedance 2.0 + Claude Code Creates $10k Websites in Minutes** (Apr 11, 2026)
+  - watch: https://youtu.be/NvxiSG34mPU
+  - resources: https://drive.google.com/drive/folders/1yD1n7UIJqHXxiHCxwqmhzJRew9eYDCfq
+- **Unlock the Next Evolution of Claude Code with One Plugin** (Apr 12, 2026)
+  - watch: https://youtu.be/4XqVR6xI6Kw
+  - resources: https://drive.google.com/drive/folders/14FLA0lcBqKzNVY5VpBtppxo6_LNyiN4H
+- **Claude Code vs Google Antigravity... Which is Better?** (Apr 13, 2026)
+  - watch: https://youtu.be/99VHENEKA9o
+  - resources: https://drive.google.com/drive/folders/1CkR5P-kfzjxiJXveCiGPYrzzXd7ZPyC4
+- **Claude Code Finally Gave Us Scheduled Automations** (Apr 14, 2026)
+  - watch: https://youtu.be/ehg4fhydTgs
+  - resources: https://drive.google.com/drive/folders/1gk3WhEGd3GpQsq2YgCWbtH4hqgIb0Wwn
+- **Claude + HeyGen Just Changed Content Creation Forever** (Apr 15, 2026)
+  - watch: https://youtu.be/EbJu9T30nfI
+  - resources: https://drive.google.com/drive/folders/1XsUFIYKYnoI5oT8xt9Cjnepf5QX-WacT
+- **Claude Opus 4.7 Just Dropped... Or Did It Really?** (Apr 16, 2026)
+  - watch: https://youtu.be/NiMc2PoTiXo
+  - resources: none
+- **I Turned Claude Opus 4.7 Into a 24/7 Trader** (Apr 17, 2026)
+  - watch: https://youtu.be/6MC1XqZSltw
+  - resources: https://drive.google.com/file/d/1XgwarwhlzcCPUAKVRzF7YiChfKLoLvHK/view?usp=sharing
+- **Claude Design Just Became Unstoppable** (Apr 17, 2026)
+  - watch: https://youtu.be/gAoZ95kqG7w
+  - resources: none
+- **Claude Just Changed Video Editing Forever** (Apr 18, 2026)
+  - watch: https://youtu.be/ZNbgOhxhzXg
+  - resources: https://github.com/nateherkai/hyperframes-student-kit
+- **How to Manage Your Claude Limits Better Than 99% of People** (Apr 20, 2026)
+  - watch: https://youtu.be/_qZvORxGqI0
+  - resources: https://drive.google.com/drive/folders/1Gec-42rgEGFXpktKAwWLAqvaU--OuAhZ
+- **Claude Design Builds Beautiful 3D Websites Instantly (full course)** (Apr 21, 2026)
+  - watch: https://youtu.be/TcFeSjwTo7g
+  - resources: https://drive.google.com/drive/folders/1IokjDhZPaLlAEQKRUWIdmMAZV58DQ7CS
+- **OpenAI Image 2 is Nuts. Here are 10 Ways to Use it.** (Apr 22, 2026)
+  - watch: https://youtu.be/GY-kAiZGLOw
+  - resources: https://drive.google.com/drive/folders/1lDDSfutdU7hrZl55LPWV-bJW4T7F40bO
+- **Claude + HyperFrames Just Solved Video Editing** (Apr 23, 2026)
+  - watch: https://youtu.be/Aw3BkmhYu4I
+  - resources: https://drive.google.com/drive/folders/1ElzX-mUaOkZFuXTawgn7Bk3_DNPF-rsg
+- **I Tested GPT 5.5 vs Opus 4.7: What You Need to Know** (Apr 23, 2026)
+  - watch: https://youtu.be/WX4rp-vP3zo
+  - resources: none
+- **Claude Code + Playwright Automates Literally Anything** (Apr 25, 2026)
+  - watch: https://youtu.be/J-6pnl5DQg8
+  - resources: https://drive.google.com/drive/folders/18jZRRBb9a1h8PFbTKJqrxgpvoTiTRyhR
+- **32 Claude Code Hacks in 16 Mins** (Apr 27, 2026)
+  - watch: https://youtu.be/jqoFP9QapXI
+  - resources: https://drive.google.com/drive/folders/1KYQGVMSgJeBtiGMw4cdBAIDmZgT5mcgi
+- **Claude Design Masterclass: Websites, Videos & More (2 Hours)** (Apr 30, 2026)
+  - watch: https://youtu.be/ovabeVoWrA0
+  - resources: https://drive.google.com/drive/folders/14-Evyvr8MvOBQD-hfM3aGxBDfYLOYsQU
+- **Build & Sell Claude Code Operating Systems (2+ Hour Course)** (May 1, 2026)
+  - watch: https://youtu.be/bCljOfCH8Ms
+  - resources: https://drive.google.com/drive/folders/1xp6z0dEdAzU274VviyErquYw5-oSbgPh
+- **I Tried 100+ Claude Code Skills. These 6 Are The Best** (May 3, 2026)
+  - watch: https://youtu.be/eRS3CmvrOvA
+  - resources: https://drive.google.com/drive/folders/1ctUfwOovOz7EJ3zBeDIZdzLKWO4nFuFQ
+- **Building Realistic Voice Agents Has Never Been Easier** (May 4, 2026)
+  - watch: https://youtu.be/-cdexJWN8YA
+  - resources: https://drive.google.com/drive/folders/1mgGliw6EvO13GI5ATa9zU3Qxceve5qyU
+- **Higgsfield Just Turned Claude Into a Creative Agency** (May 5, 2026)
+  - watch: https://youtu.be/xn6Z5PYyAIE
+  - resources: https://drive.google.com/drive/folders/1iRE-2mo8C9_cpvo4kPzZvCxoxG_cd8L7
+- **Master 97% of Codex in 1 Hour (full course)** (May 6, 2026)
+  - watch: https://youtu.be/3TdD8Qv5Tk8
+  - resources: https://drive.google.com/drive/folders/1g64yKt4QF6TT4XJkyUgIqnDMOS-shuiJ
+- **Overwhelmed By AI? Just Copy My Tech Stack** (May 8, 2026)
+  - watch: https://youtu.be/35WuZxbAY68
+  - resources: https://drive.google.com/drive/folders/1J4XacDfnEuQcet2wKRaWUHrTUXOblac6
+- **Printing Press Just 10x'd Everyone's Claude Code** (May 9, 2026)
+  - watch: https://youtu.be/YHk45NEpspE
+  - resources: https://drive.google.com/drive/folders/1oEhmzskmLL1flFAnebGPpoLr7XCnv86j
+- **Multi-Agent Building In Claude Code Somehow Got Easier** (May 12, 2026)
+  - watch: https://youtu.be/ZAaxx3qyT8g
+  - resources: https://drive.google.com/drive/folders/13j4CmIdlYf0BO2pbqNmPLbCFSDwW_tW3
+- **Every Level of Claude Explained in 21 Minutes** (May 12, 2026)
+  - watch: https://youtu.be/ZRb7D6R64hM
+  - resources: https://drive.google.com/drive/folders/1aLs-mLYpivfGm7J8vAwwgmgUjf5dOKvU
+- **I Tested 3 Ways to Deploy Claude Agents (Here's When to Use Each)** (May 15, 2026)
+  - watch: https://youtu.be/xJ5oz63mIec
+  - resources: https://drive.google.com/drive/folders/1ZnE-Pkg6W3rJKxPblEcrgFEXU3qXVkJk
+- **The AI Career Opportunity Nobody is Talking About in 2026** (May 17, 2026)
+  - watch: https://youtu.be/iIfOprq2kCM
+  - resources: https://drive.google.com/drive/folders/1AUFKElWvT-o5MnnUd0HtPViP-eAiso6a
+- **How to Use Your Claude Code Projects in Codex in 5 Mins** (May 18, 2026)
+  - watch: https://youtu.be/kB9iMD0EjT8
+  - resources: https://drive.google.com/drive/folders/1FsAOu4oKGCdfE4AaNlC3yC8yePwMzrgH
+- **The One Habit That Doubles Your Claude Code Session Limit** (May 21, 2026)
+  - watch: https://youtu.be/6cEQEba0i2A
+  - resources: https://drive.google.com/drive/folders/1H7mXhGOEYuuLQswTPFf5CZ2Z-vcZWLSd
+- **The AI Offer You Can Sell Tomorrow Morning** (May 22, 2026)
+  - watch: https://youtu.be/Pi-m8R068r4
+  - resources: https://drive.google.com/drive/folders/1pajU5tstK3opSCoM7LWBsjeGkhK7zTw6
+- **100 Hours Testing Claude Code vs ChatGPT Codex (honest results)** (May 26, 2026)
+  - watch: https://youtu.be/RLjaUES9P8A
+  - resources: https://drive.google.com/drive/folders/1UtKVjCvnj0PE56TEc1vZcqgdeOSrbuZx
+- **Opus 4.8 Just Dropped. Here's How To Actually Use It.** (May 28, 2026)
+  - watch: https://youtu.be/q5lg3npxjAc
+  - resources: https://drive.google.com/drive/folders/1p-jO2sO0GSt6VRBJkeWQn1Yzw0ujUDSX
+- **I Turned Claude Opus 4.8 Into My Entire AI Operating System** (May 29, 2026)
+  - watch: https://youtu.be/0WDkwMxj13s
+  - resources: https://drive.google.com/drive/folders/12WSgT4_Yu-yoBIn4xX2s6o62jjHHG-sW
+- **Claude Code Dynamic Workflows Clearly Explained** (May 30, 2026)
+  - watch: https://youtu.be/jZgcWCzxh1I
+  - resources: https://drive.google.com/drive/folders/15IX51slGq6veq-qZKx4-LRXMUoG37qaZ
+- **I Tested Every Claude Code Feature, These 12 Are the Best** (Jun 3, 2026)
+  - watch: https://youtu.be/vfWTyEreOEc
+  - resources: https://drive.google.com/drive/folders/1fcI8jAM7EoXC5xMlVnR6yNq4HKKlQ0dT
+
+
+# >>> WEBSITE / 3D / DESIGN VIDEOS (filtered) <<<
+
+- **Turn Any Website Into LLM Ready Data INSTANTLY** (Feb 11, 2026)
+  - watch: https://youtu.be/4efAzBiTeVo
+  - resources: https://drive.google.com/drive/folders/17IXJBlb4HBNy5w1cPrjE3k56itSPMVy5
+- **Building Beautiful Websites with Claude Code Is Too Easy** (Feb 19, 2026)
+  - watch: https://youtu.be/86HM0RUWhCk
+  - resources: https://drive.google.com/drive/folders/1V5H7yxrUnA6C0hmSxVMtJL5-MF3q2I4l
+- **The NEW Nano Banana 2 + Antigravity Destroys Every AI Image Tool** (Feb 27, 2026)
+  - watch: https://youtu.be/iTKkoGd3YcM
+  - resources: https://drive.google.com/drive/folders/1y5Fp9ZvadSgn5lEBN1Z6IklnAOZoVKbm
+- **The NEW Nano Banana 2 + Claude Code = $10k Websites** (Mar 3, 2026)
+  - watch: https://youtu.be/q0TgUtj6vIs
+  - resources: https://drive.google.com/drive/folders/1EJAYDqcda1sArWIBoowwoqeyD1aJ1uC8
+- **Seedance 2.0 + Claude Code Creates $10k Websites in Minutes** (Apr 11, 2026)
+  - watch: https://youtu.be/NvxiSG34mPU
+  - resources: https://drive.google.com/drive/folders/1yD1n7UIJqHXxiHCxwqmhzJRew9eYDCfq
+- **Claude Design Just Became Unstoppable** (Apr 17, 2026)
+  - watch: https://youtu.be/gAoZ95kqG7w
+  - resources: none
+- **Claude Design Builds Beautiful 3D Websites Instantly (full course)** (Apr 21, 2026)
+  - watch: https://youtu.be/TcFeSjwTo7g
+  - resources: https://drive.google.com/drive/folders/1IokjDhZPaLlAEQKRUWIdmMAZV58DQ7CS
+- **Claude Design Masterclass: Websites, Videos & More (2 Hours)** (Apr 30, 2026)
+  - watch: https://youtu.be/ovabeVoWrA0
+  - resources: https://drive.google.com/drive/folders/14-Evyvr8MvOBQD-hfM3aGxBDfYLOYsQU

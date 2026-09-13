@@ -1,0 +1,19 @@
+SPEND METER  2026-09
+
+  THE ENVELOPE, from the brain's own ruling
+  [..................................]  USD 0.00 of 20.00, 20.00 left
+
+  BY PROVIDER, from the ledger
+    gemini          2 calls        133 in        56 out  USD  0.0003
+    anthropic       1 calls         16 in         8 out  USD  0.0002
+    openrouter      1 calls        106 in       117 out  USD  0.0001
+    nvidia          1 calls         48 in       184 out  USD  0.0000
+
+  BY LANE, which is the half a vendor bill can never tell you
+    live-check   USD  0.0003
+    voice        USD  0.0002
+
+  3 call(s) were written before this meter knew their price and have been
+  repriced from their own recorded tokens, so the ledger corrects itself.
+
+  (this tool reads and records. It never calls a model and never spends.)

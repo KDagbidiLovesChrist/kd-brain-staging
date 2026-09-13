@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Automation Pipeline</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #050d1a;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+    color: #fff;
+  }
+
+  /* Animated star background */
+  .stars {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    pointer-events: none;
+    z-index: 0;
+  }
+  .star {
+    position: absolute;
+    width: 2px; height: 2px;
+    background: #fff;
+    border-radius: 50%;
+    animation: twinkle 3s infinite alternate;
+  }
+
+  @keyframes twinkle {
+    0% { opacity: 0.1; }
+    100% { opacity: 0.8; }
+  }
+
+  /* Header */
+  header {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    padding: 60px 20px 20px;
+  }
+
+  header .label {
+    font-size: 11px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #4fc3f7;
+    margin-bottom: 16px;
+  }
+
+  header h1 {
+    font-size: clamp(28px, 5vw, 52px);
+    font-weight: 800;
+    background: linear-gradient(135deg, #ffffff 0%, #4fc3f7 50%, #a78bfa 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1.2;
+    margin-bottom: 16px;
+  }
+
+  header p {
+    font-size: 16px;
+    color: #94a3b8;
+    max-width: 560px;
+    margin: 0 auto;
+    line-height: 1.7;
+  }
+
+  /* One line */
+  .one-line {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    margin: 40px auto 20px;
+    padding: 0 20px;
+  }
+
+  .one-line-text {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(79, 195, 247, 0.08);
+    border: 1px solid rgba(79, 195, 247, 0.2);
+    border-radius: 50px;
+    padding: 12px 24px;
+    font-size: 13px;
+    color: #94a3b8;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .one-line-text span {
+    color: #4fc3f7;
+    font-weight: 600;
+  }
+
+  .arrow-small { color: #475569; }
+
+  /* Pipeline */
+  .pipeline {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px 80px;
+    gap: 0;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  /* Node */
+  .node {
+    position: relative;
+    width: 100%;
+    max-width: 680px;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 20px;
+    padding: 28px 32px;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    transition: all 0.3s ease;
+    cursor: default;
+    animation: fadeSlide 0.6s ease both;
+  }
+
+  .node:hover {
+    background: rgba(255,255,255,0.06);
+    border-color: rgba(255,255,255,0.15);
+    transform: translateY(-2px);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+  }
+
+  .node:nth-child(1) { animation-delay: 0.1s; }
+  .node:nth-child(3) { animation-delay: 0.2s; }
+  .node:nth-child(5) { animation-delay: 0.3s; }
+  .node:nth-child(7) { animation-delay: 0.4s; }
+  .node:nth-child(9) { animation-delay: 0.5s; }
+  .node:nth-child(11) { animation-delay: 0.6s; }
+  .node:nth-child(13) { animation-delay: 0.7s; }
+
+  @keyframes fadeSlide {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Icon */
+  .node-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    flex-shrink: 0;
+  }
+
+  .node-content { flex: 1; }
+
+  .node-step {
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+    font-weight: 600;
+  }
+
+  .node-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #f1f5f9;
+  }
+
+  .node-desc {
+    font-size: 14px;
+    color: #64748b;
+    line-height: 1.7;
+  }
+
+  .node-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 12px;
+  }
+
+  .tag {
+    font-size: 11px;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+  }
+
+  /* Connector */
+  .connector {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4px 0;
+    gap: 0;
+    animation: fadeIn 0.4s ease both;
+  }
+
+  .connector-line {
+    width: 2px;
+    height: 28px;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.1), rgba(255,255,255,0.05));
+    position: relative;
+    overflow: hidden;
+  }
+
+  .connector-line::after {
+    content: '';
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent, #4fc3f7, transparent);
+    animation: flow 2s linear infinite;
+  }
+
+  @keyframes flow {
+    0% { top: -100%; }
+    100% { top: 100%; }
+  }
+
+  .connector-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.2);
+  }
+
+  /* Color themes per node */
+  .theme-blue .node-icon { background: rgba(59,130,246,0.15); }
+  .theme-blue .node-step { color: #60a5fa; }
+  .theme-blue:hover { border-color: rgba(59,130,246,0.3); box-shadow: 0 20px 60px rgba(59,130,246,0.1); }
+
+  .theme-purple .node-icon { background: rgba(139,92,246,0.15); }
+  .theme-purple .node-step { color: #a78bfa; }
+  .theme-purple:hover { border-color: rgba(139,92,246,0.3); box-shadow: 0 20px 60px rgba(139,92,246,0.1); }
+
+  .theme-cyan .node-icon { background: rgba(6,182,212,0.15); }
+  .theme-cyan .node-step { color: #22d3ee; }
+  .theme-cyan:hover { border-color: rgba(6,182,212,0.3); box-shadow: 0 20px 60px rgba(6,182,212,0.1); }
+
+  .theme-green .node-icon { background: rgba(16,185,129,0.15); }
+  .theme-green .node-step { color: #34d399; }
+  .theme-green:hover { border-color: rgba(16,185,129,0.3); box-shadow: 0 20px 60px rgba(16,185,129,0.1); }
+
+  .theme-orange .node-icon { background: rgba(245,158,11,0.15); }
+  .theme-orange .node-step { color: #fbbf24; }
+  .theme-orange:hover { border-color: rgba(245,158,11,0.3); box-shadow: 0 20px 60px rgba(245,158,11,0.1); }
+
+  .theme-pink .node-icon { background: rgba(236,72,153,0.15); }
+  .theme-pink .node-step { color: #f472b6; }
+  .theme-pink:hover { border-color: rgba(236,72,153,0.3); box-shadow: 0 20px 60px rgba(236,72,153,0.1); }
+
+  .theme-gold .node-icon { background: rgba(202,138,4,0.2); }
+  .theme-gold .node-step { color: #eab308; }
+  .theme-gold { border-color: rgba(202,138,4,0.25) !important; }
+  .theme-gold:hover { border-color: rgba(234,179,8,0.5) !important; box-shadow: 0 20px 60px rgba(234,179,8,0.15) !important; }
+
+  /* Tag colors */
+  .tag-blue { background: rgba(59,130,246,0.1); color: #60a5fa; border: 1px solid rgba(59,130,246,0.2); }
+  .tag-purple { background: rgba(139,92,246,0.1); color: #a78bfa; border: 1px solid rgba(139,92,246,0.2); }
+  .tag-cyan { background: rgba(6,182,212,0.1); color: #22d3ee; border: 1px solid rgba(6,182,212,0.2); }
+  .tag-green { background: rgba(16,185,129,0.1); color: #34d399; border: 1px solid rgba(16,185,129,0.2); }
+  .tag-orange { background: rgba(245,158,11,0.1); color: #fbbf24; border: 1px solid rgba(245,158,11,0.2); }
+  .tag-pink { background: rgba(236,72,153,0.1); color: #f472b6; border: 1px solid rgba(236,72,153,0.2); }
+
+  /* Section labels */
+  .section-label {
+    font-size: 10px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #334155;
+    text-align: center;
+    margin: 8px 0 4px;
+  }
+
+  /* Footer */
+  footer {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    padding: 0 20px 60px;
+  }
+
+  .footer-line {
+    font-size: 13px;
+    color: #334155;
+    margin-bottom: 24px;
+  }
+
+  .result-box {
+    display: inline-block;
+    background: linear-gradient(135deg, rgba(234,179,8,0.1), rgba(234,179,8,0.05));
+    border: 1px solid rgba(234,179,8,0.3);
+    border-radius: 16px;
+    padding: 24px 40px;
+  }
+
+  .result-box .result-label {
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #eab308;
+    margin-bottom: 8px;
+  }
+
+  .result-box .result-text {
+    font-size: 22px;
+    font-weight: 800;
+    color: #fff;
+  }
+
+  /* Pulse glow on gold node */
+  @keyframes pulse-gold {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(234,179,8,0); }
+    50% { box-shadow: 0 0 30px 8px rgba(234,179,8,0.08); }
+  }
+  .theme-gold { animation: fadeSlide 0.6s ease both, pulse-gold 3s ease infinite; }
+
+  @media (max-width: 600px) {
+    .node { padding: 20px; gap: 14px; }
+    .node-icon { width: 42px; height: 42px; font-size: 18px; }
+    .node-title { font-size: 17px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Stars -->
+<div class="stars" id="stars"></div>
+
+<!-- Header -->
+<header>
+  <div class="label">How It Works</div>
+  <h1>The AI Automation Pipeline</h1>
+  <p>Every automation — from a simple lead list to a full business system — follows the same path. Problem in. Result out. Automatically.</p>
+</header>
+
+<!-- One line -->
+<div class="one-line">
+  <div class="one-line-text">
+    <span>Problem</span><span class="arrow-small">→</span>
+    <span>Skill</span><span class="arrow-small">→</span>
+    <span>Agent</span><span class="arrow-small">→</span>
+    <span>Tool</span><span class="arrow-small">→</span>
+    <span>Output</span><span class="arrow-small">→</span>
+    <span>Value</span><span class="arrow-small">→</span>
+    <span>Money</span>
+  </div>
+</div>
+
+<!-- Pipeline -->
+<div class="pipeline">
+
+  <!-- Node 1 -->
+  <div class="node theme-blue">
+    <div class="node-icon">🎯</div>
+    <div class="node-content">
+      <div class="node-step">Step 01 — Trigger</div>
+      <div class="node-title">Client Has a Problem</div>
+      <div class="node-desc">A business owner identifies a pain point — not enough leads, no website, losing customers, wasting hours on manual work. This is the starting signal. Everything begins here.</div>
+      <div class="node-tags">
+        <span class="tag tag-blue">Not enough leads</span>
+        <span class="tag tag-blue">Losing customers</span>
+        <span class="tag tag-blue">Wasting time</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="connector"><div class="connector-line"></div><div class="connector-dot"></div><div class="connector-line"></div></div>
+
+  <!-- Node 2 -->
+  <div class="node theme-purple">
+    <div class="node-icon">⚡</div>
+    <div class="node-content">
+      <div class="node-step">Step 02 — Skill Match</div>
+      <div class="node-title">The Right Skill is Triggered</div>
+      <div class="node-desc">Claude checks the skills catalog and matches the problem to the right automation. One command triggers the entire workflow — no manual steps, no guesswork.</div>
+      <div class="node-tags">
+        <span class="tag tag-purple">/scrape</span>
+        <span class="tag tag-purple">/newsletter</span>
+        <span class="tag tag-purple">/website</span>
+        <span class="tag tag-purple">/exec</span>
+        <span class="tag tag-purple">/proposal</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="connector"><div class="connector-line"></div><div class="connector-dot"></div><div class="connector-line"></div></div>
+
+  <!-- Node 3 -->
+  <div class="node theme-cyan">
+    <div class="node-icon">🧠</div>
+    <div class="node-content">
+      <div class="node-step">Step 03 — Agent (WAT Framework)</div>
+      <div class="node-title">Claude Reads, Reasons, Decides</div>
+      <div class="node-desc">Claude reads the skill file (the SOP), understands the goal, and plans the exact steps to take. This is the Workflow (W) and Agent (A) of WAT — the brain of the system. No guessing. No manual decisions.</div>
+      <div class="node-tags">
+        <span class="tag tag-cyan">Haiku — fast tasks</span>
+        <span class="tag tag-cyan">Sonnet — most tasks</span>
+        <span class="tag tag-cyan">Opus — complex</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="connector"><div class="connector-line"></div><div class="connector-dot"></div><div class="connector-line"></div></div>
+
+  <!-- Node 4 -->
+  <div class="node theme-green">
+    <div class="node-icon">🔧</div>
+    <div class="node-content">
+      <div class="node-step">Step 04 — Tools Execute</div>
+      <div class="node-title">The Machines Do the Work</div>
+      <div class="node-desc">Claude calls the right tools in sequence. Firecrawl scrapes websites. Playwright controls a real browser. APIs connect services. Python formats the data. Each tool does one job — perfectly, every time.</div>
+      <div class="node-tags">
+        <span class="tag tag-green">Firecrawl MCP</span>
+        <span class="tag tag-green">Playwright MCP</span>
+        <span class="tag tag-green">Anthropic API</span>
+        <span class="tag tag-green">Gmail SMTP</span>
+        <span class="tag tag-green">Vercel</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="connector"><div class="connector-line"></div><div class="connector-dot"></div><div class="connector-line"></div></div>
+
+  <!-- Node 5 -->
+  <div class="node theme-orange">
+    <div class="node-icon">🔗</div>
+    <div class="node-content">
+      <div class="node-step">Step 05 — Connections</div>
+      <div class="node-title">Hooks, Webhooks & Triggers</div>
+      <div class="node-desc">The pipeline runs automatically — no one needs to press a button. Webhooks fire when an order comes in. Scheduled automations run at 8am every day. Hooks chain tasks together silently in the background.</div>
+      <div class="node-tags">
+        <span class="tag tag-orange">Webhook — app to app</span>
+        <span class="tag tag-orange">Hook — internal trigger</span>
+        <span class="tag tag-orange">Scheduled — clock-based</span>
+        <span class="tag tag-orange">Web trigger — URL-based</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="connector"><div class="connector-line"></div><div class="connector-dot"></div><div class="connector-line"></div></div>
+
+  <!-- Node 6 -->
+  <div class="node theme-pink">
+    <div class="node-icon">📦</div>
+    <div class="node-content">
+      <div class="node-step">Step 06 — Output</div>
+      <div class="node-title">The Result is Delivered</div>
+      <div class="node-desc">A clean, professional output arrives for the client. A CSV file of 100 verified leads. A live website with a real URL. A branded newsletter sent to 500 subscribers. A proposal with ROI numbers. Done.</div>
+      <div class="node-tags">
+        <span class="tag tag-pink">CSV lead list</span>
+        <span class="tag tag-pink">Live website</span>
+        <span class="tag tag-pink">Email sent</span>
+        <span class="tag tag-pink">Proposal PDF</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="connector"><div class="connector-line"></div><div class="connector-dot"></div><div class="connector-line"></div></div>
+
+  <!-- Node 7 — Gold/Money -->
+  <div class="node theme-gold">
+    <div class="node-icon">💰</div>
+    <div class="node-content">
+      <div class="node-step">Step 07 — Value & Money</div>
+      <div class="node-title">The Client Wins. You Get Paid.</div>
+      <div class="node-desc">The plumber gets 100 new leads. The PT gets 3 hours back every week. The business gets a professional website live within 24 hours. You charge based on the value delivered — not the time it took. They keep paying monthly. You scale.</div>
+      <div class="node-tags">
+        <span class="tag tag-orange">€150 starter</span>
+        <span class="tag tag-orange">€250 growth</span>
+        <span class="tag tag-orange">€120/month retainer</span>
+        <span class="tag tag-orange">10× ROI for client</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-line">B2B → Irish & UK businesses · B2C → their customers · You → the system that connects them</div>
+  <div class="result-box">
+    <div class="result-label">The Mission</div>
+    <div class="result-text">Financial Freedom. God's Way.</div>
+  </div>
+</footer>
+
+<script>
+  // Generate stars
+  const starsContainer = document.getElementById('stars');
+  for (let i = 0; i < 120; i++) {
+    const star = document.createElement('div');
+    star.classList.add('star');
+    star.style.left = Math.random() * 100 + '%';
+    star.style.top = Math.random() * 100 + '%';
+    star.style.animationDelay = Math.random() * 3 + 's';
+    star.style.animationDuration = (2 + Math.random() * 3) + 's';
+    star.style.width = star.style.height = (Math.random() > 0.7 ? 3 : 2) + 'px';
+    star.style.opacity = Math.random() * 0.5;
+    starsContainer.appendChild(star);
+  }
+</script>
+
+</body>
+</html>

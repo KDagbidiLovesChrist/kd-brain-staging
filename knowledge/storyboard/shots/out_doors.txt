@@ -1,0 +1,45 @@
+THE DOORS, seen from DESKTOP-GRULS39
+
+  1. ccr code      open  (service up)
+     the everyday door: 5 of its 6 routes are PAID (OpenRouter), only background is free on the laptop, and it is the only way to put the router in front of Claude Code
+  2. Claude Code   open   [Kingdavidagb@icloud.com]
+     the chair. Judgement, contracts, terminal work. A plan already paid for
+  3. Codex         open   [a plan (fixed bar)]
+     web interfaces and hard architecture
+  4. Antigravity   open   [kingagbidi@gmail.com]
+     visual work, image mockups, a free second opinion
+  5. Copilot CLI   open 
+     several vendors under one login, when other bars are spent
+  6. Hermes        absent
+     a free grinder pointed at the local models
+  7. Ollama        open  (service up)
+     the floor. Free, private, and it cannot run out
+
+  also here:
+    Gemini CLI    open
+
+SIGNED IN
+  Claude Code   Kingdavidagb@icloud.com
+  Codex         a plan (fixed bar)
+  Antigravity   kingagbidi@gmail.com
+  GitHub        signed in
+
+CCR, THE EVERYDAY DOOR
+  background    ollama,llama3.2:1b                 FREE, your own machine
+  default       openrouter,google/gemini-3.8-flash paid
+  image         openrouter,google/gemini-3.8-flash paid
+  longContext   openrouter,google/gemini-3.8-flash paid
+  think         openrouter,google/gemini-3.8-flash paid
+  webSearch     openrouter,google/gemini-3.8-flash paid
+  1 free, 5 paid.
+  ccr records no token counts of its own, so per-call ccr spend cannot be read.
+  Every paid route goes through OpenRouter, so `python tools/spend_meter.py`
+  already includes it, mixed in with any other OpenRouter use.
+
+WHAT CAN BE MEASURED
+  readable by a script: OpenRouter credit, Copilot usage (with a plan), local health
+  NOT readable: the Claude plan bars, Antigravity's bars, the Gemini free tier, the
+    OpenAI balance. For those this tool can say which door fits, never how much is left.
+  So: glance at the bar inside the app before a long session on a paid door.
+
+(this tool never opens a door and never spends anything. Your hand does that.)

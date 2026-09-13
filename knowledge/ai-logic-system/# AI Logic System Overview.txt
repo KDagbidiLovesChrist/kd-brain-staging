@@ -1,0 +1,50 @@
+# AI Logic System Overview
+
+- Core concept: proprietary AI logic system designed for healthcare and stem cell applications
+- System built to integrate with existing company platforms and operations
+- Back end currently building locally, generating a front-end test environment based on supplied data
+- System prompt structured in layers:
+  - Long-term goal layer
+  - Client/customer layer (simplified for end users)
+  - More data may be needed before consumer release
+
+# Healthcare and Stem Cell Opportunity
+
+- Target sector: pharmaceutical and stem cell companies developing groundbreaking drugs
+- Plan to license or integrate the AI logic into those companies’ existing systems
+- Healthcare and education identified as the two primary verticals
+- Vision: significant expansion of healthcare capabilities through the logic system
+
+# Go-to-Market and Enterprise Strategy
+
+- No public release until enterprise backing is secured
+- Enterprise backing enables economic backing
+- Revenue from healthcare and education verticals funds broader goals, including land acquisition
+- Timeline: operational within one year; five-year horizon for full scale
+- Current blocker: storage costs
+  - More storage = more data = better processing
+  - Storage is the single priority to resolve before scaling
+
+# Ownership, Shares, and Next Steps
+
+- Business structured as a family operation
+  - Year one: King and uncle as primary stakeholders
+  - King’s shares distributed evenly across family
+  - Share allocation also includes the church and uncle’s business
+- Contracts must be airtight from every legal angle
+- System value proposition: the AI system’s outputs will always favor and amplify the client’s own value
+- Next step: complete the current engine build, finalize contracts, then hold a formal presentation call
+
+# Next Steps
+
+- **Complete engine build and review output**
+- **Prioritize securing storage capacity**
+- **Schedule presentation call once engine and contracts are ready**
+Meeting Title: AI logic system for healthcare and stem cell applications — storage and enterprise backing
+Date: Aug 10
+Meeting participants: king agbidi
+
+Transcript:
+Me: Do you understand, you know, looking for drugs, play groundbreaking drugs that they will put you to the market? Do you understand? You know how medical sector now is big on stem cells. Yeah. Do you understand? We can ask themselves and all that. Imagine if you give our logic to. We give the logic to the. To those companies systems and through operations. Oh, my gosh. For healthcare will just expand. Yes. Now, don't you know that big time? Big time. You understand? So don't. Don't overly make it too complex. I already did. I already. I already got the whole complexity in the back end. I solved the. Okay, I saw the. I called. I solved the continual build. It's a continual build. Yeah. So that's why I mean, I solved that continuously. So right now it's building it in my local engine right now that's going to build me a back end for front-end test based on the data I gave it. So I just said. I just said, okay, now that you understand me fully, I just. I just said the prompt in my. In my own terms. And after I said it, I then explained it mathematically. I want to be explained biblically and then to understand it biblically. We have the right sources. So I gave it the sources. This is why I'm ahead of most people. I know the actual source to find Jesus Christ. But most people do it. They listen to fake gods and everything, and they make that their God. Whereas I actually, like, put the church. Jesus Christ said he's going to leave this church here and it's going to last. And the church has been destined to start of time. And towards the end, there's going to be no more churches, unfortunately. But the church isn't there. So then I said, okay, my own Orthodox church. I said, based off, factually speaking of what we know of the church, of the ancient teachings that's consistent with gods and with the Bible and to put it to that loop function, then that would be like that. That's my system prompt, essentially. Then I have that for the long term goal. Then I put for clients for those people. So I made it very. So I dumbed it and then cover clients that I actually put it another factor in for customers. But then it's telling me now that it needs more data. So right now it's doing it. That actually might be enough data to give it to consumers online. There may be enough, but obviously we want economic back on first. So we're not even going to put it in the public until we have enough Enterprise backing because we're Enterprise back in. We can get economic backing. And our healthcare and the education system is what's going to make us basically help. We're also going to have enough money to buy the land back and then boom, without comment, the economy with this and then we, this could be done by next year. Oh, my gosh. Five years time, I'm going to give us a good time because I want to give us five years to do this, wherever you are, because the system now the brain is just, is active and there's robots just working on my computer as we speak. And the only thing that's stopping us right now is storage. Because obviously I already have, there's so much information out on the internet and already. So I don't know how much store. If I had, you said to yourself, if there was storage, it's game over. So obviously beat the, our priority right now is storage cost. So the more storage we have, the more data we can get and the better we can process information. Yeah. I just wanted to call it to get that question. I'll let you go now. So this engine, I want to, when it's finished building right now, and I'm happy with it, and then I have the contract sorted out. I'm going to have a presentation call. Then I'll let you guys know if his win is done or not. So I call you again and I'll update you again. Okay. Okay. All right. Take care. Bye bye. I should also mention as well that I want the authors to be a family business. So I want to know from the first year is going to be me, my uncle, as probably mentioned. And for my shares, I'm going to divert my shares evenly amongst my family. So we're all making money. And there's going to be shares towards the church. And I think uncle have for his business. And, yeah, that's how they should be shared. Honestly. Everything the contact should be airproof and tight as well from every league angle possible that values that basically the ex, the system pumps will always favor the systems X, which is. So our value is the system is going to be much, is going to ultimately help their value more, if that makes sense. I know the value. I think you can put on a trend and the math mathematically explaining. I'm sure you can and explain it to me. 
+
+One more, on the maths, because you asked to be held literally. 9^(T/3) as T → ∞ diverges. 

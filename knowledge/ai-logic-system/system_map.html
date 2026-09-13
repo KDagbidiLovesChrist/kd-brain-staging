@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>King David's AI System Map</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: #0d1117;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: #e6edf3;
+    padding: 40px 20px;
+    min-height: 100vh;
+  }
+  h1 {
+    text-align: center;
+    font-size: 28px;
+    color: #f0c040;
+    margin-bottom: 6px;
+    letter-spacing: 1px;
+  }
+  .subtitle {
+    text-align: center;
+    font-size: 14px;
+    color: #8b949e;
+    margin-bottom: 50px;
+  }
+
+  /* ── LAYOUT ── */
+  .diagram {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+
+  /* ── BOXES ── */
+  .box {
+    border-radius: 12px;
+    padding: 18px 28px;
+    text-align: center;
+    position: relative;
+    width: 340px;
+  }
+  .box .label {
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    opacity: 0.7;
+    margin-bottom: 4px;
+  }
+  .box .title {
+    font-size: 18px;
+    font-weight: 700;
+  }
+  .box .desc {
+    font-size: 12px;
+    opacity: 0.75;
+    margin-top: 4px;
+  }
+
+  .you       { background: #1a3a1a; border: 2px solid #3fb950; }
+  .you .title { color: #3fb950; }
+
+  .claude    { background: #1a2a3a; border: 2px solid #58a6ff; }
+  .claude .title { color: #58a6ff; }
+
+  .brain     { background: #2a1a3a; border: 2px solid #bc8cff; }
+  .brain .title { color: #bc8cff; }
+
+  .wat       { background: #3a2a1a; border: 2px solid #f0883e; }
+  .wat .title { color: #f0883e; }
+
+  .tools-row {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 760px;
+    max-width: 100%;
+  }
+  .tool {
+    border-radius: 10px;
+    padding: 14px 16px;
+    text-align: center;
+    flex: 1;
+    min-width: 160px;
+  }
+  .tool .icon { font-size: 24px; margin-bottom: 6px; }
+  .tool .name { font-size: 13px; font-weight: 700; }
+  .tool .role { font-size: 11px; opacity: 0.7; margin-top: 2px; }
+
+  .t-fire    { background: #2a1a1a; border: 2px solid #ff7b72; }
+  .t-fire .name { color: #ff7b72; }
+  .t-play    { background: #1a2a1a; border: 2px solid #3fb950; }
+  .t-play .name { color: #3fb950; }
+  .t-ai      { background: #1a1a2a; border: 2px solid #58a6ff; }
+  .t-ai .name { color: #58a6ff; }
+  .t-mail    { background: #2a2a1a; border: 2px solid #f0c040; }
+  .t-mail .name { color: #f0c040; }
+
+  .files-row {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 760px;
+    max-width: 100%;
+  }
+  .file {
+    border-radius: 8px;
+    padding: 10px 14px;
+    text-align: center;
+    flex: 1;
+    min-width: 110px;
+    background: #161b22;
+    border: 1px solid #30363d;
+  }
+  .file .icon { font-size: 18px; }
+  .file .name { font-size: 11px; font-weight: 700; color: #8b949e; margin-top: 4px; }
+  .file .role { font-size: 10px; color: #484f58; margin-top: 2px; }
+
+  .money {
+    background: linear-gradient(135deg, #1a3a1a, #0d2a0d);
+    border: 2px solid #3fb950;
+    border-radius: 16px;
+    padding: 22px 40px;
+    text-align: center;
+    width: 340px;
+  }
+  .money .icon { font-size: 36px; }
+  .money .title { font-size: 22px; font-weight: 800; color: #3fb950; margin-top: 6px; }
+  .money .desc { font-size: 12px; color: #8b949e; margin-top: 4px; }
+
+  /* ── ARROWS ── */
+  .arrow {
+    width: 2px;
+    height: 40px;
+    background: #30363d;
+    margin: 0 auto;
+    position: relative;
+  }
+  .arrow::after {
+    content: '▼';
+    position: absolute;
+    bottom: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #30363d;
+    font-size: 14px;
+  }
+  .arrow.green { background: #3fb950; }
+  .arrow.green::after { color: #3fb950; }
+  .arrow.blue  { background: #58a6ff; }
+  .arrow.blue::after  { color: #58a6ff; }
+  .arrow.orange{ background: #f0883e; }
+  .arrow.orange::after{ color: #f0883e; }
+
+  /* ── BRAIN FILES ROW ── */
+  .brain-row {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 760px;
+    max-width: 100%;
+  }
+  .brain-box {
+    border-radius: 10px;
+    padding: 14px 18px;
+    text-align: center;
+    flex: 1;
+    min-width: 150px;
+  }
+  .brain-box .icon { font-size: 22px; margin-bottom: 4px; }
+  .brain-box .name { font-size: 13px; font-weight: 700; }
+  .brain-box .role { font-size: 11px; opacity: 0.7; margin-top: 2px; }
+
+  .b-claude  { background: #1a1a2a; border: 2px solid #bc8cff; }
+  .b-claude .name { color: #bc8cff; }
+  .b-mem     { background: #1a2a2a; border: 2px solid #39d0d8; }
+  .b-mem .name { color: #39d0d8; }
+  .b-set     { background: #2a2a1a; border: 2px solid #f0c040; }
+  .b-set .name { color: #f0c040; }
+
+  /* ── WAT STEPS ── */
+  .wat-steps {
+    display: flex;
+    gap: 0;
+    align-items: center;
+    justify-content: center;
+    width: 760px;
+    max-width: 100%;
+  }
+  .wat-step {
+    border-radius: 10px;
+    padding: 14px 20px;
+    text-align: center;
+    flex: 1;
+  }
+  .wat-step .letter { font-size: 28px; font-weight: 900; }
+  .wat-step .word   { font-size: 12px; font-weight: 700; margin-top: 2px; }
+  .wat-step .desc   { font-size: 10px; opacity: 0.7; margin-top: 4px; }
+  .wat-arrow { font-size: 24px; color: #f0883e; padding: 0 8px; flex-shrink: 0; }
+
+  .w-step { background: #2a1a0a; border: 2px solid #f0883e; }
+  .w-step .letter { color: #f0883e; }
+  .a-step { background: #1a1a2a; border: 2px solid #bc8cff; }
+  .a-step .letter { color: #bc8cff; }
+  .t-step { background: #1a2a1a; border: 2px solid #3fb950; }
+  .t-step .letter { color: #3fb950; }
+
+  /* ── SECTION LABELS ── */
+  .section-label {
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #484f58;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  /* ── SKILL BOX ── */
+  .skill {
+    background: #1a1a1a;
+    border: 2px dashed #f0c040;
+    border-radius: 10px;
+    padding: 14px 28px;
+    text-align: center;
+    width: 340px;
+  }
+  .skill .title { font-size: 20px; font-weight: 800; color: #f0c040; font-family: monospace; }
+  .skill .desc  { font-size: 11px; color: #8b949e; margin-top: 4px; }
+
+  /* ── FOOTER ── */
+  .loop-label {
+    font-size: 11px;
+    color: #484f58;
+    text-align: center;
+    margin-top: 20px;
+    letter-spacing: 1px;
+  }
+
+  /* ── HANDOFF ROW ── */
+  .handoff-box {
+    background: #1a1a2a;
+    border: 1px solid #30363d;
+    border-radius: 10px;
+    padding: 12px 24px;
+    text-align: center;
+    font-size: 12px;
+    color: #8b949e;
+    width: 500px;
+    max-width: 100%;
+  }
+  .handoff-box strong { color: #58a6ff; }
+</style>
+</head>
+<body>
+
+<h1>King David's AI System Map</h1>
+<p class="subtitle">Make money. Build freedom. Do it God's way.</p>
+
+<div class="diagram">
+
+  <!-- YOU -->
+  <div class="box you">
+    <div class="label">The Boss</div>
+    <div class="title">King David</div>
+    <div class="desc">Describes the goal in plain English</div>
+  </div>
+
+  <div class="arrow green"></div>
+
+  <!-- CLAUDE CODE -->
+  <div class="box claude">
+    <div class="label">The HQ / Batman's Cave</div>
+    <div class="title">Claude Code</div>
+    <div class="desc">The app. Your command center.</div>
+  </div>
+
+  <div class="arrow blue"></div>
+
+  <!-- BRAIN FILES -->
+  <div class="section-label">reads these three files first</div>
+  <div class="brain-row">
+    <div class="brain-box b-claude">
+      <div class="icon">🧠</div>
+      <div class="name">CLAUDE.md</div>
+      <div class="role">Master Brain<br>Who you are + rules</div>
+    </div>
+    <div class="brain-box b-mem">
+      <div class="icon">🗂️</div>
+      <div class="name">Memory Files</div>
+      <div class="role">Projects + profile<br>+ past sessions</div>
+    </div>
+    <div class="brain-box b-set">
+      <div class="icon">⚙️</div>
+      <div class="name">settings.json</div>
+      <div class="role">Tools connected<br>+ permissions</div>
+    </div>
+  </div>
+
+  <div class="arrow blue"></div>
+
+  <!-- WAT FRAMEWORK -->
+  <div class="section-label">the WAT framework — the recipe for every project</div>
+  <div class="wat-steps">
+    <div class="wat-step w-step">
+      <div class="letter">W</div>
+      <div class="word">Workflow</div>
+      <div class="desc">The recipe card<br>written in plain English</div>
+    </div>
+    <div class="wat-arrow">→</div>
+    <div class="wat-step a-step">
+      <div class="letter">A</div>
+      <div class="word">Agent</div>
+      <div class="desc">Claude reads,<br>thinks, decides</div>
+    </div>
+    <div class="wat-arrow">→</div>
+    <div class="wat-step t-step">
+      <div class="letter">T</div>
+      <div class="word">Tool</div>
+      <div class="desc">Scripts + MCP<br>actually do the work</div>
+    </div>
+  </div>
+
+  <div class="arrow orange"></div>
+
+  <!-- TOOLS -->
+  <div class="section-label">the tools (machines in your workshop)</div>
+  <div class="tools-row">
+    <div class="tool t-fire">
+      <div class="icon">🕷️</div>
+      <div class="name">Firecrawl MCP</div>
+      <div class="role">Web scraper<br>reads any website</div>
+    </div>
+    <div class="tool t-play">
+      <div class="icon">🤖</div>
+      <div class="name">Playwright MCP</div>
+      <div class="role">Browser robot<br>clicks, fills, automates</div>
+    </div>
+    <div class="tool t-ai">
+      <div class="icon">💡</div>
+      <div class="name">Anthropic API</div>
+      <div class="role">AI brain<br>writes + summarizes</div>
+    </div>
+    <div class="tool t-mail">
+      <div class="icon">📧</div>
+      <div class="name">Gmail SMTP</div>
+      <div class="role">Mail sender<br>delivers newsletters</div>
+    </div>
+  </div>
+
+  <div class="arrow green"></div>
+
+  <!-- SKILL -->
+  <div class="skill">
+    <div class="title">/newsletter &nbsp;|&nbsp; /scrape</div>
+    <div class="desc">one word triggers the whole chain forever</div>
+  </div>
+
+  <div class="arrow green"></div>
+
+  <!-- MONEY -->
+  <div class="money">
+    <div class="icon">💰</div>
+    <div class="title">MONEY</div>
+    <div class="desc">Fiverr leads · Newsletter clients · Automation services</div>
+  </div>
+
+  <div class="arrow" style="height:50px;"></div>
+
+  <!-- FILE STORAGE -->
+  <div class="section-label">everything gets saved automatically</div>
+  <div class="files-row">
+    <div class="file">
+      <div class="icon">📁</div>
+      <div class="name">plans/</div>
+      <div class="role">approved plans<br>before building</div>
+    </div>
+    <div class="file">
+      <div class="icon">💾</div>
+      <div class="name">file-history/</div>
+      <div class="role">backups of<br>every edit</div>
+    </div>
+    <div class="file">
+      <div class="icon">📋</div>
+      <div class="name">projects/</div>
+      <div class="role">full convo<br>history</div>
+    </div>
+    <div class="file">
+      <div class="icon">🧩</div>
+      <div class="name">plugins/</div>
+      <div class="role">extra tools<br>app store</div>
+    </div>
+    <div class="file">
+      <div class="icon">📡</div>
+      <div class="name">telemetry/</div>
+      <div class="role">usage stats<br>sent to Anthropic</div>
+    </div>
+    <div class="file">
+      <div class="icon">🔒</div>
+      <div class="name">.credentials</div>
+      <div class="role">API keys<br>stored safely</div>
+    </div>
+  </div>
+
+  <div class="arrow" style="height:50px;"></div>
+
+  <!-- HANDOFF -->
+  <div class="handoff-box">
+    ⚡ Session ends → <strong>auto_handoff.py fires automatically</strong> → handoff saved to <strong>handoffs/</strong><br>
+    <span style="font-size:11px; margin-top:4px; display:block;">Next session: reads CLAUDE.md + memory + handoff → already knows everything → picks up where you left off</span>
+  </div>
+
+  <div class="loop-label" style="margin-top:30px;">↺ &nbsp; The loop repeats every session. Every project. Forever. &nbsp; ↺</div>
+
+</div>
+
+</body>
+</html>
