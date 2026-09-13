@@ -8,3 +8,4 @@ change into the real private brain.
 Content here is a safe subset only: `memory/`, `knowledge/`, `commands/`,
 already pruned of anything guarded, and scanned clean of all named secret
 shapes before publishing.
+
